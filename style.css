@@ -31,7 +31,7 @@ body {
 /* current time-zone box */
 
 .current {
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: white;
   justify-content: space-around;
