@@ -46,6 +46,7 @@ async function fetchByAddress(searchText){
 // creating the info-box dynamically
 // takes the fetched object and the info-box where we want to show the details i.e, current or searched time-zone
 function showCurrentZone(obj, box) {
+    box.style.display = 'flex'
     box.innerHTML = `<p>Name Of Time Zone : ${obj.timezone.name}</p>
     <div class="lat-long">
         <p>Lat : ${obj.lat}</p>
@@ -89,7 +90,6 @@ document.body.onload = async() => {
                 return
             }else{
                 console.log(data.features[0].properties);
-                timeZone.style.display = 'flex'
                 showCurrentZone(data.features[0].properties, timeZone)
             }
         }
